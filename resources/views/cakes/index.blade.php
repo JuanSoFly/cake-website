@@ -19,7 +19,7 @@
             <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
                 <div class="relative">
                     <img
-                        src="{{ asset('images/cakes/cake.jpg' . $cake->image) }}"
+                        src="{{ asset('images/cakes/' . $cake->image) }}"
                         alt="{{ $cake->name }}"
                         class="object-cover w-full h-48"
                     />

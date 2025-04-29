@@ -17,7 +17,7 @@ class CakeSeeder extends Seeder
                 'name' => 'Chocolate Delight',
                 'description' => 'Rich chocolate layers with ganache and chocolate shavings',
                 'price' => 45.00,
-                'image' => 'chocolate-delight.jpg',
+                'image' => 'chocolate-delight.png',
                 'is_featured' => true,
             ],
             [

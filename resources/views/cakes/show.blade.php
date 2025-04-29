@@ -7,7 +7,7 @@
             <div class="space-y-4">
                 <div class="overflow-hidden rounded-xl">
                     <img
-                        src="{{ asset('images/cakes/cakes.jpg' . $cake->image) }}"
+                        src="{{ asset('images/cakes/' . $cake->image) }}"
                         alt="{{ $cake->name }}"
                         class="aspect-square object-cover w-full"
                     />
