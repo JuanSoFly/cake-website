@@ -83,16 +83,16 @@
                         <div class="space-y-2">
                             <div class="flex justify-between">
                                 <span>Subtotal</span>
-                                <span>${{ number_format($order->subtotal, 2) }}</span>
+                                <span>₱{{ number_format($order->subtotal, 2) }}</span>
                             </div>
                             <div class="flex justify-between">
                                 <span>Tax (8%)</span>
-                                <span>${{ number_format($order->tax, 2) }}</span>
+                                <span>₱{{ number_format($order->tax, 2) }}</span>
                             </div>
                             <div class="border-t pt-2 mt-2">
                                 <div class="flex justify-between font-semibold">
                                     <span>Total</span>
-                                    <span>${{ number_format($order->total, 2) }}</span>
+                                    <span>₱{{ number_format($order->total, 2) }}</span>
                                 </div>
                             </div>
                         </div>

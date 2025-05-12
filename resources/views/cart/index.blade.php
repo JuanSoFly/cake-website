@@ -58,7 +58,7 @@
                                         </div>
                                     </div>
                                 </td>
-                                <td class="px-4 py-4 text-sm">${{ number_format($item['price'], 2) }}</td>
+                                <td class="px-4 py-4 text-sm">₱{{ number_format($item['price'], 2) }}</td>
                                 <td class="px-4 py-4">
                                     <form action="{{ route('cart.update', $index) }}" method="POST" class="flex items-center">
                                         @csrf
@@ -103,7 +103,7 @@
                                         }
                                     </script>
                                 </td>
-                                <td class="px-4 py-4 text-sm">${{ number_format($item['subtotal'], 2) }}</td>
+                                <td class="px-4 py-4 text-sm">₱{{ number_format($item['subtotal'], 2) }}</td>
                                 <td class="px-4 py-4 text-right">
                                     <form action="{{ route('cart.remove', $index) }}" method="POST">
                                         @csrf
@@ -135,16 +135,16 @@
                     <div class="space-y-2">
                         <div class="flex justify-between">
                             <span>Subtotal</span>
-                            <span>${{ number_format($cart['subtotal'], 2) }}</span>
+                            <span>₱{{ number_format($cart['subtotal'], 2) }}</span>
                         </div>
                         <div class="flex justify-between">
                             <span>Tax (8%)</span>
-                            <span>${{ number_format($cart['tax'], 2) }}</span>
+                            <span>₱{{ number_format($cart['tax'], 2) }}</span>
                         </div>
                         <div class="border-t pt-2 mt-2">
                             <div class="flex justify-between font-semibold">
                                 <span>Total</span>
-                                <span>${{ number_format($cart['total'], 2) }}</span>
+                                <span>₱{{ number_format($cart['total'], 2) }}</span>
                             </div>
                         </div>
                     </div>

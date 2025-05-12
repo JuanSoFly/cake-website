@@ -19,52 +19,73 @@
 </head>
 <body class="font-sans antialiased">
     <div class="flex flex-col min-h-screen">
-        <header class="sticky top-0 z-10 bg-white border-b">
-            <div class="container flex items-center justify-between h-16 px-4 md:px-6">
+                {{-- 1. Add x-data and the event listener to the header --}}
+        <header
+            x-data="{ isMobileMenuOpen: false }"
+            @toggle-mobile-menu.window="isMobileMenuOpen = !isMobileMenuOpen"
+            class="sticky top-0 z-30 bg-white border-b" {{-- Increased z-index --}}
+        >
+            <div class="container flex items-center justify-between h-16 px-4 md:px-6 relative"> {{-- Added relative positioning if menu is absolute --}}
                 <a href="{{ route('home') }}" class="flex items-center gap-2 text-xl font-bold text-pink-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
-                        <path d="M8.37 12.37a2.5 2.5 0 0 0-3.326.602c-.47.692-.348 1.635.252 2.236l1.544 1.544c.603.603 1.55.726 2.24.254a2.5 2.5 0 0 0 .601-3.328"></path>
-                        <path d="m14.5 12.5 2.25 2.25"></path>
-                        <path d="m11.5 9.5 2.25 2.25"></path>
-                        <path d="M8.5 6.5 13 11"></path>
-                        <path d="M20 14c0 4.418-4.477 8-10 8-3.41 0-6.42-1.33-8-3.5"></path>
-                        <path d="M5.5 6.5 8 9"></path>
-                        <path d="M3 3v4"></path>
-                        <path d="M7 3H3"></path>
-                        <path d="M14 10V4a2 2 0 0 0-2-2H8"></path>
-                        <path d="M4 15H2"></path>
-                    </svg>
+                    {{-- Logo SVG --}}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M8.37 12.37a2.5 2.5 0 0 0-3.326.602c-.47.692-.348 1.635.252 2.236l1.544 1.544c.603.603 1.55.726 2.24.254a2.5 2.5 0 0 0 .601-3.328"></path><path d="m14.5 12.5 2.25 2.25"></path><path d="m11.5 9.5 2.25 2.25"></path><path d="M8.5 6.5 13 11"></path><path d="M20 14c0 4.418-4.477 8-10 8-3.41 0-6.42-1.33-8-3.5"></path><path d="M5.5 6.5 8 9"></path><path d="M3 3v4"></path><path d="M7 3H3"></path><path d="M14 10V4a2 2 0 0 0-2-2H8"></path><path d="M4 15H2"></path></svg>
                     <span>Sweet Delights</span>
                 </a>
+
+                {{-- Desktop Navigation --}}
                 <nav class="hidden md:flex items-center gap-6">
-                    <a href="{{ route('home') }}" class="text-sm font-medium hover:underline underline-offset-4">
-                        Home
-                    </a>
-                    <a href="#cakes" class="text-sm font-medium hover:underline underline-offset-4">
-                        Our Cakes
-                    </a>
-                    <a href="#about" class="text-sm font-medium hover:underline underline-offset-4">
-                        About Us
-                    </a>
-                    <a href="#testimonials" class="text-sm font-medium hover:underline underline-offset-4">
-                        Testimonials
-                    </a>
-                    <a href="#contact" class="text-sm font-medium hover:underline underline-offset-4">
-                        Contact
-                    </a>
+                    <a href="{{ route('home') }}" class="text-sm font-medium hover:underline underline-offset-4">Home</a>
+                    <a href="#cakes" class="text-sm font-medium hover:underline underline-offset-4">Our Cakes</a>
+                    <a href="#about" class="text-sm font-medium hover:underline underline-offset-4">About Us</a>
+                    <a href="#testimonials" class="text-sm font-medium hover:underline underline-offset-4">Testimonials</a>
+                    <a href="#contact" class="text-sm font-medium hover:underline underline-offset-4">Contact</a>
                 </nav>
+
+                {{-- Desktop Order Button --}}
                 <a href="{{ route('order') }}" class="hidden md:inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-pink-600 text-white hover:bg-pink-700 h-10 px-4 py-2">
                     Order Now
                 </a>
-                <button x-data @click="$dispatch('toggle-mobile-menu')" class="md:hidden inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10">
-                    <span class="sr-only">Toggle menu</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+
+                {{-- 4. Update Mobile Menu Toggle Button --}}
+                <button
+                    @click="$dispatch('toggle-mobile-menu')"
+                    class="md:hidden inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 w-10"
+                    aria-controls="mobile-menu"
+                    :aria-expanded="isMobileMenuOpen.toString()"
+                    aria-label="Toggle navigation menu"
+                >
+                    {{-- Hamburger Icon (shown when menu is closed) --}}
+                    <svg x-show="!isMobileMenuOpen" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
                         <line x1="4" x2="20" y1="12" y2="12" />
                         <line x1="4" x2="20" y1="6" y2="6" />
                         <line x1="4" x2="20" y1="18" y2="18" />
                     </svg>
+                    {{-- Close 'X' Icon (shown when menu is open) --}}
+                    <svg x-show="isMobileMenuOpen" x-cloak xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6">
+                         <line x1="18" y1="6" x2="6" y2="18" />
+                         <line x1="6" y1="6" x2="18" y2="18" />
+                    </svg>
                 </button>
-            </div>
+
+                {{-- 3. Add the Mobile Menu itself --}}
+                <nav
+                    id="mobile-menu"
+                    x-show="isMobileMenuOpen"
+                    x-cloak
+                    @click.outside="isMobileMenuOpen = false" {{-- Optional: close menu when clicking outside --}}
+                    class="md:hidden absolute top-full left-0 right-0 z-20 bg-white border-b border-t p-4 space-y-2"
+                    aria-label="Mobile navigation"
+                    >
+                    <a href="{{ route('home') }}" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">Home</a>
+                    <a href="#cakes" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">Our Cakes</a>
+                    <a href="#about" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">About Us</a>
+                    <a href="#testimonials" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">Testimonials</a>
+                    <a href="#contact" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">Contact</a>
+                    <a href="{{ route('order') }}" @click="isMobileMenuOpen = false" class="mt-2 block w-full text-center rounded-md text-sm font-medium bg-pink-600 text-white hover:bg-pink-700 h-10 px-4 py-2 flex items-center justify-center">
+                        Order Now
+                    </a>
+                </nav>
+            </div> {{-- End .container --}}
         </header>
         
         <main class="flex-1">
