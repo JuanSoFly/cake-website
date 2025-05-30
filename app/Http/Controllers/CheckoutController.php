@@ -53,7 +53,7 @@ class CheckoutController extends Controller
             'delivery_date' => 'required|date|after_or_equal:today',
             'delivery_time' => 'required|string',
             'special_instructions' => 'nullable|string',
-            'payment_method' => 'required|in:credit_card,paypal,cash_on_delivery'
+            'payment_method' => 'required|in:gcash,maya,cash_on_delivery'
         ]);
         
         // Create order

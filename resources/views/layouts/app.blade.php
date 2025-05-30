@@ -29,13 +29,13 @@
                 <a href="{{ route('home') }}" class="flex items-center gap-2 text-xl font-bold text-pink-600">
                     {{-- Logo SVG --}}
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M8.37 12.37a2.5 2.5 0 0 0-3.326.602c-.47.692-.348 1.635.252 2.236l1.544 1.544c.603.603 1.55.726 2.24.254a2.5 2.5 0 0 0 .601-3.328"></path><path d="m14.5 12.5 2.25 2.25"></path><path d="m11.5 9.5 2.25 2.25"></path><path d="M8.5 6.5 13 11"></path><path d="M20 14c0 4.418-4.477 8-10 8-3.41 0-6.42-1.33-8-3.5"></path><path d="M5.5 6.5 8 9"></path><path d="M3 3v4"></path><path d="M7 3H3"></path><path d="M14 10V4a2 2 0 0 0-2-2H8"></path><path d="M4 15H2"></path></svg>
-                    <span>Sweet Delights</span>
+                    <span>O'Cakes with Sweets</span>
                 </a>
 
                 {{-- Desktop Navigation --}}
                 <nav class="hidden md:flex items-center gap-6">
                     <a href="{{ route('home') }}" class="text-sm font-medium hover:underline underline-offset-4">Home</a>
-                    <a href="#cakes" class="text-sm font-medium hover:underline underline-offset-4">Our Cakes</a>
+                    <a href="#cakes" class="text-sm font-medium hover:underline underline-offset-4">Cakes & Breads</a>
                     <a href="#about" class="text-sm font-medium hover:underline underline-offset-4">About Us</a>
                     <a href="#testimonials" class="text-sm font-medium hover:underline underline-offset-4">Testimonials</a>
                     <a href="#contact" class="text-sm font-medium hover:underline underline-offset-4">Contact</a>
@@ -77,7 +77,7 @@
                     aria-label="Mobile navigation"
                     >
                     <a href="{{ route('home') }}" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">Home</a>
-                    <a href="#cakes" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">Our Cakes</a>
+                    <a href="#cakes" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">Cakes & Breads</a>
                     <a href="#about" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">About Us</a>
                     <a href="#testimonials" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">Testimonials</a>
                     <a href="#contact" @click="isMobileMenuOpen = false" class="block text-sm font-medium hover:underline underline-offset-4 py-1">Contact</a>
@@ -107,21 +107,23 @@
                         <path d="M14 10V4a2 2 0 0 0-2-2H8"></path>
                         <path d="M4 15H2"></path>
                     </svg>
-                    <span>Sweet Delights</span>
+                    <span>O'Cakes</span>
                 </div>
                 <nav class="flex gap-4 md:gap-6 md:ml-auto">
-                    <a href="#" class="text-sm font-medium hover:underline underline-offset-4">
+                     
+                    <a href="{{ route('privacy.policy') }}" class="text-sm font-medium hover:underline underline-offset-4">
                         Privacy Policy
                     </a>
-                    <a href="#" class="text-sm font-medium hover:underline underline-offset-4">
+                    <a href="{{ route('terms.service') }}" class="text-sm font-medium hover:underline underline-offset-4">
                         Terms of Service
                     </a>
-                    <a href="#" class="text-sm font-medium hover:underline underline-offset-4">
+                    <a href="{{ route('careers') }}" class="text-sm font-medium hover:underline underline-offset-4">
                         Careers
                     </a>
+                   
                 </nav>
                 <div class="flex items-center gap-4 md:ml-auto md:gap-2">
-                    <a href="#" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-10 w-10" aria-label="Facebook">
+                    <a href="https://www.facebook.com/AKennesu02" target="_blank" class="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-10 w-10" aria-label="Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
                             <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                         </svg>
@@ -141,7 +143,7 @@
                 </div>
             </div>
             <div class="border-t py-4 text-center text-sm text-gray-500">
-                © {{ date('Y') }} Sweet Delights. All rights reserved.
+                © {{ date('Y') }} O'Cakes. All rights reserved.
             </div>
         </footer>
     </div>

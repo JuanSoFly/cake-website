@@ -195,28 +195,28 @@
                         <div class="flex items-center space-x-2">
                             <input
                                 type="radio"
-                                id="payment_method_credit_card"
+                                id="payment_method_gcash"
                                 name="payment_method"
-                                value="credit_card"
-                                {{ old('payment_method', 'credit_card') == 'credit_card' ? 'checked' : '' }}
+                                value="gcash"
+                                {{ old('payment_method', 'gcash') == 'gcash' ? 'checked' : '' }}
                                 class="h-4 w-4 border-gray-300 text-pink-600 focus:ring-pink-600"
                             />
-                            <label for="payment_method_credit_card" class="text-sm font-medium">
-                                Credit Card
+                            <label for="payment_method_gcash" class="text-sm font-medium">
+                                GCASH
                             </label>
                         </div>
                         
                         <div class="flex items-center space-x-2">
                             <input
                                 type="radio"
-                                id="payment_method_paypal"
+                                id="payment_method_maya"
                                 name="payment_method"
-                                value="paypal"
-                                {{ old('payment_method') == 'paypal' ? 'checked' : '' }}
+                                value="maya"
+                                {{ old('payment_method') == 'maya' ? 'checked' : '' }}
                                 class="h-4 w-4 border-gray-300 text-pink-600 focus:ring-pink-600"
                             />
-                            <label for="payment_method_paypal" class="text-sm font-medium">
-                                PayPal
+                            <label for="payment_method_maya" class="text-sm font-medium">
+                                MAYA
                             </label>
                         </div>
                         

@@ -49,3 +49,15 @@ Route::get('/order', function () {
 Route::get('/team', function () {
     return view('coming-soon', ['page' => 'Team']);
 })->name('team');
+
+Route::get('/privacy', function () {
+    return view('coming-soon', ['page' => 'Privacy Policy']);
+})->name('privacy.policy');
+
+Route::get('/terms', function () {
+    return view('coming-soon', ['page' => 'Terms of Service']);
+})->name('terms.service');
+
+Route::get('/careers', function () {
+    return view('coming-soon', ['page' => 'Careers']);
+})->name('careers');

@@ -14,21 +14,39 @@ abstract class Controller
         // Sample testimonial data
         $testimonials = [
             [
-                'name' => 'Sarah Johnson',
-                'initials' => 'SJ',
-                'comment' => 'The birthday cake you made for my daughter was absolutely perfect! Not only was it beautiful, but it tasted amazing too. Everyone at the party was impressed.',
-                'rating' => 5,
+                'name' => 'Reniele Rabanillo',
+                'initials' => 'RR',
+                'comment' => '7/10 sakin xmas cake wala naman kaming xmas ang boring ni kuya arn at otatay mga shity sa gilid pero 7/10 pa rin sila sakin',
+                'rating' => 7,
             ],
             [
-                'name' => 'Michael Chen',
-                'initials' => 'MC',
-                'comment' => 'We ordered our wedding cake from Sweet Delights and couldn\'t be happier. The design process was fun, and the final cake exceeded our expectations. Thank you!',
-                'rating' => 5,
+                'name' => 'Rodney Onias',
+                'initials' => 'RO',
+                'comment' => 'Nakaka tampo yung cashier hindi ako pinansin sabi ko pabili ng malboro',
+                'rating' => 3,
             ],
             [
-                'name' => 'Emily Rodriguez',
-                'initials' => 'ER',
-                'comment' => 'I\'ve tried many bakeries, but Sweet Delights is by far the best. Their cakes are moist, flavorful, and the decorations are always on point. My go-to for all celebrations!',
+                'name' => 'Sebastersers Barcia',
+                'initials' => 'SB',
+                'comment' => 'Yeheyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy!!!!!!',
+                'rating' => 5,
+            ],
+             [
+                'name' => 'Kuya Arn Kenneth',
+                'initials' => 'AK',
+                'comment' => 'Sobrang sarap naman nitong Japanese Straberry Cakes kakabili ko kay Reniele Rabanillo ',
+                'rating' => 5,
+            ],
+             [
+                'name' => 'Otatay',
+                'initials' => 'OT',
+                'comment' => 'Okay naman ang gojo cake kaso hindi ko abot yung cashier kaya binag ko na lang 5/5 pa rin kayo kasi hindi niyo ako hinabol',
+                'rating' => 5,
+            ],
+             [
+                'name' => 'Francis Roi Paladan',
+                'initials' => 'FR',
+                'comment' => 'Namatay si Pope Francis ako na ang papalit sa kanya sana iboto niyo ako',
                 'rating' => 5,
             ],
         ];

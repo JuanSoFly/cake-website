@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <section class="w-full py-12 md:py-24 lg:py-32 bg-pink-50">
+    <section class="w-full py-12 md:py-24 lg:py-25 bg-pink-50">
         <div class="container px-4 md:px-6">
             <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <div class="flex flex-col justify-center space-y-4">
@@ -24,7 +24,7 @@
                 </div>
                 <div class="mx-auto w-full max-w-[500px] lg:max-w-none relative">
                     <img
-                        src="{{ asset('images/hero-cake.jpg') }}"
+                        src="{{ asset('images/hero-cake.png') }}"
                         alt="Beautiful tiered cake with floral decorations"
                         class="mx-auto aspect-square rounded-xl object-cover"
                     />
@@ -38,7 +38,7 @@
             <div class="flex flex-col items-center justify-center space-y-4 text-center">
                 <div class="space-y-2">
                     <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-pink-800">
-                        Our Signature Cakes
+                        Our Signature Cakes & Breads
                     </h2>
                     <p class="max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                         Explore our collection of handcrafted cakes made with premium ingredients and love.
@@ -102,10 +102,10 @@
                 <div class="flex flex-col justify-center space-y-4">
                     <div class="space-y-2">
                         <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-pink-800">
-                            Our Sweet Story
+                            Our O'Cake Story
                         </h2>
                         <p class="max-w-[600px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                            Sweet Delights was founded in 2010 with a simple mission: to create delicious, beautiful cakes that
+                            O'Cakes with Sweets was founded in 2025 with a simple mission: to create delicious, beautiful cakes that
                             bring joy to every celebration.
                         </p>
                     </div>

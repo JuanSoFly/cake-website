@@ -6,7 +6,7 @@
         <div class="flex flex-col items-center justify-center space-y-4 text-center">
             <div class="space-y-2">
                 <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-pink-800">
-                    Our Delicious Cakes
+                    Our Delicious Cakes & Breads
                 </h1>
                 <p class="max-w-[700px] text-gray-600 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     Browse our selection of handcrafted cakes made with premium ingredients and love.
