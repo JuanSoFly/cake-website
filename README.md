@@ -101,7 +101,3 @@ This project is open-source and available under the [MIT License](https://www.go
 ### Contact
 
 Have a question? Reach out via the contact form on the website or by [creating an issue](https://github.com/JuanSoFly/cake-website/issues).
-
-```
-
-```
