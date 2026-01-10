@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="w-full py-12 md:py-24 lg:py-25 bg-pink-50">
-        <div class="container px-4 md:px-6">
+        <div class="container mx-auto px-4 md:px-6">
             <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <div class="flex flex-col justify-center space-y-4">
                     <div class="space-y-2">
@@ -34,7 +34,7 @@
     </section>
 
     <section id="cakes" class="w-full py-12 md:py-24 lg:py-32">
-        <div class="container px-4 md:px-6">
+        <div class="container mx-auto px-4 md:px-6">
             <div class="flex flex-col items-center justify-center space-y-4 text-center">
                 <div class="space-y-2">
                     <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-pink-800">
@@ -45,7 +45,7 @@
                     </p>
                 </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
                 @foreach($cakes as $cake)
                 <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
                     <div class="relative">
@@ -90,7 +90,7 @@
     </section>
 
     <section id="about" class="w-full py-12 md:py-24 lg:py-32 bg-pink-50">
-        <div class="container px-4 md:px-6">
+        <div class="container mx-auto px-4 md:px-6">
             <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <div class="mx-auto w-full max-w-[500px] lg:max-w-none">
                     <img
@@ -131,7 +131,7 @@
     </section>
 
     <section id="testimonials" class="w-full py-12 md:py-24 lg:py-32">
-        <div class="container px-4 md:px-6">
+        <div class="container mx-auto px-4 md:px-6">
             <div class="flex flex-col items-center justify-center space-y-4 text-center">
                 <div class="space-y-2">
                     <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-pink-800">
@@ -170,7 +170,7 @@
     </section>
 
     <section id="contact" class="w-full py-12 md:py-24 lg:py-32 bg-pink-50">
-        <div class="container px-4 md:px-6">
+        <div class="container mx-auto px-4 md:px-6">
             <div class="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
                 <div class="flex flex-col justify-center space-y-4">
                     <div class="space-y-2">

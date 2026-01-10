@@ -25,7 +25,7 @@
             @toggle-mobile-menu.window="isMobileMenuOpen = !isMobileMenuOpen"
             class="sticky top-0 z-30 bg-white border-b" {{-- Increased z-index --}}
         >
-            <div class="container flex items-center justify-between h-16 px-4 md:px-6 relative"> {{-- Added relative positioning if menu is absolute --}}
+            <div class="container mx-auto flex items-center justify-between h-16 px-4 md:px-6 relative"> {{-- Added relative positioning if menu is absolute --}}
                 <a href="{{ route('home') }}" class="flex items-center gap-2 text-xl font-bold text-pink-600">
                     {{-- Logo SVG --}}
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M8.37 12.37a2.5 2.5 0 0 0-3.326.602c-.47.692-.348 1.635.252 2.236l1.544 1.544c.603.603 1.55.726 2.24.254a2.5 2.5 0 0 0 .601-3.328"></path><path d="m14.5 12.5 2.25 2.25"></path><path d="m11.5 9.5 2.25 2.25"></path><path d="M8.5 6.5 13 11"></path><path d="M20 14c0 4.418-4.477 8-10 8-3.41 0-6.42-1.33-8-3.5"></path><path d="M5.5 6.5 8 9"></path><path d="M3 3v4"></path><path d="M7 3H3"></path><path d="M14 10V4a2 2 0 0 0-2-2H8"></path><path d="M4 15H2"></path></svg>
@@ -93,7 +93,7 @@
         </main>
         
         <footer class="border-t bg-white">
-            <div class="container flex flex-col gap-4 px-4 py-6 md:flex-row md:items-center md:gap-6 md:px-6 md:py-8">
+            <div class="container mx-auto flex flex-col gap-4 px-4 py-6 md:flex-row md:items-center md:gap-6 md:px-6 md:py-8">
                 <div class="flex items-center gap-2 text-xl font-bold text-pink-600">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
                         <path d="M8.37 12.37a2.5 2.5 0 0 0-3.326.602c-.47.692-.348 1.635.252 2.236l1.544 1.544c.603.603 1.55.726 2.24.254a2.5 2.5 0 0 0 .601-3.328"></path>

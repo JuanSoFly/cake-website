@@ -2,7 +2,7 @@
 
 @section('content')
 <section class="w-full py-12 md:py-24 lg:py-32">
-    <div class="container px-4 md:px-6">
+    <div class="container mx-auto px-4 md:px-6">
         <div class="flex flex-col items-center justify-center space-y-4 text-center">
             <div class="space-y-2">
                 <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-pink-800">
@@ -14,7 +14,7 @@
             </div>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-8">
             @foreach($cakes as $cake)
             <div class="rounded-lg border bg-card text-card-foreground shadow-sm overflow-hidden">
                 <div class="relative">
