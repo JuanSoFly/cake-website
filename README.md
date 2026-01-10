@@ -2,7 +2,7 @@
 
 Welcome to Cake Website — an online bakery shop where users can browse our delicious cake gallery, place orders, and get in touch! Built with Laravel (PHP & MySQL), it features a user-friendly interface, admin management, and secure order processing.
 
-![Cake Website Screenshot](screenshots/homepage.png)
+![Cake Website](public/images/ocakes-view.png)
 
 ## Features
 
@@ -65,7 +65,7 @@ php artisan serve
 ```
 
 
-Access your site at [http://localhost:8000](https://www.google.com/search?q=http://localhost:8000).
+Access your site at [http://localhost:8000](http://localhost:8000).
 
 ## Usage
 
@@ -74,13 +74,7 @@ Access your site at [http://localhost:8000](https://www.google.com/search?q=http
 * Contact us via the contact page form.
 * For admin access, log in at `/admin` (credentials setup via database/seeders).
 
-## Screenshots
 
-| Homepage | Gallery | Admin Panel |
-| --- | --- | --- |
-|  |  |  |
-
-*Feel free to replace these images with your own screenshots.*
 
 ## Contributing
 
@@ -94,7 +88,7 @@ For questions or suggestions, [open an issue](https://github.com/JuanSoFly/cake-
 
 ## License
 
-This project is open-source and available under the [MIT License](https://www.google.com/search?q=LICENSE).
+This project is open-source and available under the [MIT License](https://opensource.org/licenses/MIT).
 
 ---
 
